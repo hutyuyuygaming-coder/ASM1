@@ -114,10 +114,22 @@
         <h1>🎬 OEEntertainment</h1>
     </header>
     <nav>
-        <a href="${pageContext.request.contextPath}/home">Trang chủ</a>
-        <a href="#">Thể loại</a>
-        <a href="#">Phim mới</a>
-        <a href="#">Liên hệ</a>
+    <a href="${pageContext.request.contextPath}/home">Trang chủ</a>
+    <a href="#">Thể loại</a>
+    <a href="#">Phim mới</a>
+    <a href="#">Liên hệ</a>
+    
+    <c:choose>
+        <c:when test="${empty sessionScope.currentUser}">
+            <a href="${pageContext.request.contextPath}/login" style="float: right; color: #f1c40f;">🔐 Đăng nhập</a>
+        </c:when>
+        <c:otherwise>
+            <div style="float: right; display: inline-block;">
+                <span style="color: #2ecc71; font-weight: bold; margin-right: 10px;">👋 Xin chào, ${sessionScope.currentUser.fullname}</span>
+                <a href="${pageContext.request.contextPath}/logout" style="color: #e74c3c; margin-left: 5px;">🚪 Đăng xuất</a>
+            </div>
+            </c:otherwise>
+        </c:choose>
     </nav>
     <main>
         <jsp:include page="${pageContent}" />

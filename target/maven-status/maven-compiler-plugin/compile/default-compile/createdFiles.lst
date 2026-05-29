@@ -1,10 +1,12 @@
 com\controller\AuthServlet.class
+com\controller\LoginServlet.class
 com\controller\FavoriteServlet.class
 com\controller\AdminServlet.class
 com\dao\UserDAO.class
 com\dao\VideoDAO.class
 com\filter\AuthFilter.class
 com\controller\HomeServlet.class
+com\controller\RegisterServlet.class
 com\dao\ShareDAO.class
 com\dao\FavoriteDAO.class
 com\controller\ShareServlet.class
@@ -14,6 +16,7 @@ com\controller\AdminVideosServlet.class
 com\utils\JdbcHelper.class
 com\controller\AdminUsersServlet.class
 com\controller\DetailServlet.class
+com\controller\LogoutServlet.class
 com\utils\EmailHelper.class
 com\entity\User.class
 com\utils\EmailHelper$1.class
