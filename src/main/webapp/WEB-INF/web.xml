@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                            https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+        version="5.0">
+
+    <display-name>OEEntertainment</display-name>
+
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>com.filter.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.controller.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FavoriteServlet</servlet-name>
+        <servlet-class>com.controller.FavoriteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FavoriteServlet</servlet-name>
+        <url-pattern>/favorites</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShareServlet</servlet-name>
+        <servlet-class>com.controller.ShareServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShareServlet</servlet-name>
+        <url-pattern>/share</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AuthServlet</servlet-name>
+        <servlet-class>com.controller.AuthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthServlet</servlet-name>
+        <url-pattern>/auth</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.controller.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminUsersServlet</servlet-name>
+        <servlet-class>com.controller.AdminUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminUsersServlet</servlet-name>
+        <url-pattern>/adminUsers</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminVideosServlet</servlet-name>
+        <servlet-class>com.controller.AdminVideosServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminVideosServlet</servlet-name>
+        <url-pattern>/adminVideos</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReportsServlet</servlet-name>
+        <servlet-class>com.controller.ReportsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReportsServlet</servlet-name>
+        <url-pattern>/reports</url-pattern>
+    </servlet-mapping>
+
+</web-app>
